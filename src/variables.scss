@@ -1,0 +1,40 @@
+@function rem($size) {
+  @return $size / 16 * 1rem;
+}
+
+$ratio: 1.25; // major third
+
+$space: rem(4);
+
+$standardSpaceSizes: (
+  "none": 0,
+  "xxs": $space / 2,
+  "xs": $space * 1,
+  "sm": $space * 2,
+  "md": $space * 4,
+  "lg": $space * 8,
+  "xl": $space * 16,
+  "xxl": $space * 32
+);
+
+$borderColor: #999;
+
+.shadow-1 {
+  box-shadow: 0 rem(1) rem(3) rgba(0, 0, 0, 0.12),
+    0 rem(1) rem(2) rgba(0, 0, 0, 0.26);
+}
+
+.shadow-2 {
+  box-shadow: 0 rem(1) rem(2) rgba(0, 0, 0, 0.2),
+    0 rem(4) rem(4) rgba(0, 0, 0, 0.14), 0 rem(6) rem(16) rgba(0, 0, 0, 0.12);
+}
+
+.shadow-3 {
+  box-shadow: 0 rem(4) rem(8) rgba(0, 0, 0, 0.12),
+    0 rem(8) rem(12) rgba(0, 0, 0, 0.12), 0 rem(16) rem(24) rgba(0, 0, 0, 0.16);
+}
+
+.shadow-4 {
+  box-shadow: 0 rem(8) rem(12) rgba(0, 0, 0, 0.1),
+    0 rem(16) rem(24) rgba(0, 0, 0, 0.16), 0 rem(24) rem(48) rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,56 @@
+@import "./variables.scss";
+@import "./reset.scss";
+
+$font-size-big: calc(1rem + 0.5vw);
+$font-size-bigger: calc(1rem + 0.75vw);
+$font-size-giant: calc(1.4rem + 1.5vw);
+
+body {
+  line-height: $ratio;
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.App {
+  margin: 3rem;
+}
+
+.font-size\:big {
+  font-size: $font-size-big;
+}
+
+.font-size\:bigger {
+  font-size: $font-size-bigger;
+}
+
+.font-size\:giant {
+  font-size: $font-size-giant;
+}
+
+.font-weight\:bold {
+  font-weight: 700;
+}
+
+.font-weight\:semi-bold {
+  font-weight: 500;
+}
+
+.exampleBlock {
+  height: 3rem;
+  background: #eee;
+}
+
+.blue {
+  background-color: lightblue !important;
+}
+
+.yellow {
+  background-color: khaki !important;
+}
+
+.red {
+  background-color: LightSalmon !important;
+}

@@ -1,0 +1,20 @@
+@import "../variables.scss";
+
+.box {
+  background: inherit;
+  border-radius: rem(2);
+
+  @each $size, $value in $standardSpaceSizes {
+    &.padding-#{$size} {
+      padding: $value;
+    }
+  }
+
+  &.hasBorder {
+    border: solid rem(1) $borderColor;
+  }
+
+  * {
+    color: inherit;
+  }
+}

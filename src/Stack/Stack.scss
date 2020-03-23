@@ -1,0 +1,22 @@
+@import "../variables.scss";
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.stack > * {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@each $size, $value in $standardSpaceSizes {
+  .stack.#{$size} > * + * {
+    margin-top: $value;
+  }
+}
+
+.stack.none > * + * {
+  margin-top: 0;
+}

@@ -1,0 +1,16 @@
+.contentBlock {
+  max-width: 70ch;
+
+  &.sm {
+    max-width: 50ch;
+  }
+
+  &.lg {
+    max-width: 90ch;
+  }
+
+  &.centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

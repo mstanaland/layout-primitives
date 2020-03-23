@@ -1,0 +1,48 @@
+@import "../variables.scss";
+
+.cluster {
+  overflow: hidden;
+
+  @each $size, $value in $standardSpaceSizes {
+    &.margin-#{$size} {
+      > * {
+        margin: calc(#{$value / 2} * -1);
+
+        > * {
+          margin: calc(#{$value / 2});
+        }
+      }
+    }
+  }
+
+  > * {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+  }
+
+  &.top > * {
+    align-items: flex-start;
+  }
+
+  &.bottom > * {
+    align-items: flex-end;
+  }
+
+  &.alignCenter > * {
+    align-items: center;
+  }
+
+  &.left > * {
+    justify-content: flex-start;
+  }
+
+  &.right > * {
+    justify-content: flex-end;
+  }
+
+  &.justifyCenter > * {
+    justify-content: center;
+  }
+}

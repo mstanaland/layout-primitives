@@ -1,0 +1,28 @@
+@import "../variables.scss";
+
+.switcher {
+  @each $size, $value in $standardSpaceSizes {
+    &.margin-#{$size} {
+      > * {
+        margin: calc(#{$value / 2} * -1);
+
+        > * {
+          margin: calc(#{$value} / 2);
+        }
+      }
+    }
+  }
+}
+.switcher > * {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.switcher > * > * {
+  flex-grow: 1;
+}
+
+.switcher > * > :nth-last-child(n + 5),
+.switcher > * > :nth-last-child(n + 5) ~ * {
+  flex-basis: 100%;
+}
